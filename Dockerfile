@@ -70,7 +70,7 @@ RUN apt-get install -y sudo apt-transport-https && \
     rm install-vscode.sh
 RUN touch /usr/local/bin/code-oss-as-root && \
     echo "#!/bin/bash" >> /usr/local/bin/code-oss-as-root && \
-    echo "code-oss --user-data-dir=\"~/\" \$@" >> /usr/local/bin/code-oss-as-root && \
+    echo "code-oss --user-data-dir=\"/root\" \$@" >> /usr/local/bin/code-oss-as-root && \
     chmod +x /usr/local/bin/code-oss-as-root
 
 WORKDIR /root
